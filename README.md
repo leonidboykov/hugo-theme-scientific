@@ -1,6 +1,6 @@
 ## Scientific
 
-Hugo theme for academic laboratories. Demo at [ailab.spb.ru](https://ailab.spb.ru)
+Hugo theme for academic laboratories. Demo is available at [ailab.spb.ru](https://ailab.spb.ru)
 
 #### Installation
 

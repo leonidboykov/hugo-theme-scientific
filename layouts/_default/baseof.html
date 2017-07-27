@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatable" content="IE=edge">
+    <!-- <meta name="theme-color" content="#4d809b"> -->
+    {{ .Hugo.Generator }}
+
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Merriweather:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
+    {{ block "content" . }}{{ end }}
+  </body>
+</html>

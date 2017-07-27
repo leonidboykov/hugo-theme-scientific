@@ -1,0 +1,37 @@
+{
+  "name": "scientific",
+  "version": "1.0.0",
+  "description": "Clean theme for scientific laboratory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonidboykov/hugo-scientific-theme.git"
+  },
+  "keywords": [
+    "blog",
+    "portfolio",
+    "responsive",
+    "flexbox",
+    "academic"
+  ],
+  "author": "Leonid Boykov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonidboykov/hugo-scientific-theme/issues"
+  },
+  "homepage": "https://github.com/leonidboykov/hugo-scientific-theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "css-mqpacker": "^6.0.1",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "minireset.css": "0.0.3"
+  }
+}
