@@ -1,0 +1,42 @@
+<div class="container">
+  <nav class="navbar is-transparent is-bold">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{ "/" | absLangURL }}">
+        <span class="icon"><i class="fa fa-rocket"></i></span>&nbsp;SPACE
+      </a>
+
+      {{ if .IsTranslated }}
+        {{ range .Translations }}
+        <a class="navbar-item is-hidden-tablet" href="{{ .Permalink }}">
+          <span class="icon"><i class="fa fa-globe"></i></span>
+        </a>
+        {{ end }}
+      {{ end }}
+
+      <div class="navbar-burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <a class="navbar-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{ end }}" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        {{ end }}
+        {{ if .IsTranslated }}
+          {{ range .Translations }}
+          <div class="navbar-item is-hidden-mobile">
+            <a class="button is-primary is-inverted is-outlined" href="{{ .Permalink }}">
+              <span class="icon"><i class="fa fa-globe"></i></span>
+              <span>{{ upper .Lang }}</span>
+            </a>
+          </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </nav>
+</div>
