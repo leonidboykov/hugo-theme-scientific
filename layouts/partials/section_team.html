@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="title is-2">
+    {{ i18n "team" }}
+  </h2>
+  <h3 class="subtitle is-4">
+    {{ i18n "section-team-subtitle" | markdownify }}
+  </h3>
+  <div class="columns is-multiline">
+    {{ range where .Site.RegularPages "Section" "team" }}
+      {{ .Render "list" }}
+    {{ end }}
+  </div>
+</div>

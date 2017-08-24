@@ -1,0 +1,106 @@
+{{ define "header" }}
+  {{ partial "navigation" . }}
+{{ end }}
+
+{{ define "content" }}
+<section class="hero is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-one-third">
+          <div class="card is-fullwidth">
+            <figure class="image is-1by1">
+              <img src="/{{ .Page.Section }}/{{ .Params.slug }}.jpg">
+            </figure>
+            <div class="card-content">
+              <div class="media-content">
+                <h1 class="title is-3">{{ .Title }}</h1>
+                <h3 class="subtitle heading is-6"><small>{{ .Params.position }}</small></h3>
+                <p><span class="icon"><i class="fa fa-envelope-o"></i></span> <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
+                <p><span class="icon"><i class="fa fa-globe"></i></span> <a href="{{ .Params.website_url }}">{{ .Params.website_title }}</a></p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="title is-4">
+            {{ i18n "interests" }}
+          </h3>
+          <div class="tags">
+          {{ range .Params.interests }}
+              <span class="tag"><i class="fa fa-tags"></i>&nbsp;{{ . }}</span>
+          {{ end }}
+          </div>
+        </div>
+        <div class="column">
+          <h2 class="title is-4">{{ i18n "biography" }}</h2>
+          <div class="content" align="justify">{{ .Params.biography | markdownify }}</div>
+          {{ if .Params.awards }}
+            <h3 class="title is-4">
+              {{ i18n "awards" }}
+            </h3>
+            <ul class="fa-ul">
+              {{ range .Params.awards }}
+                <li><i class="fa-li fa fa-certificate"></i>{{ . | markdownify }}</li>
+              {{ end }}
+            </ul>
+          {{ end }}
+          <div class="columns">
+            <div class="column">
+              <h3 class="title is-4">
+                {{ i18n "education" }}
+              </h3>
+              <ul class="fa-ul">
+                {{ range .Params.education }}
+                  <li><i class="fa-li fa fa-{{ .icon }}"></i><strong>{{ .year | markdownify }}</strong> &ndash; {{ .description  | safeHTML }}</li>
+                {{ end }}
+              </ul>
+            </div>
+            <div class="column">
+              <h3 class="title is-4">{{ i18n "teaching" }}</h3>
+              <div class="content" align="justify">{{ .Params.teaching | markdownify }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <h3 class="title is-2">{{ i18n "conferences" }}</h3>
+      <div class="content">
+        <ol>
+          {{ range .Params.conferences }}
+            <li>{{ . | markdownify }}</li>
+          {{ end }}
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-medium is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h3 class="title is-2">{{ i18n "projects" }}</h3>
+      <div class="columns is-multiline">
+        {{ $currentNode := . }}
+        {{ range where .Site.Pages.ByDate.Reverse "Section" "projects" }}
+          {{ if in .Params.participants $currentNode.Slug }}
+            {{ .Render "list" }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero is-medium">
+  <div class="hero-body">
+    <div class="container">
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

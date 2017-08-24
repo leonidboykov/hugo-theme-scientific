@@ -19,5 +19,64 @@
 {{ end }}
 
 {{ define "content" }}
-  Hello there!
+  {{ $data := index .Site.Data .Site.Language.Lang }}
+  {{ range $index, $element := $data.mission.items }}
+    <section class="hero is-medium is-{{ .section }}">
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-vcentered">
+            {{ if mod $index 2 }}
+            <div class="column is-hidden-mobile">
+              <img src="/{{ .image }}" />
+            </div>
+            {{ end }}
+            <div class="column is-7">
+              <h2 class="title is-1">{{ .title }}</h2>
+              <div class="content is-size-5">
+                {{ .description | markdownify }}
+              </div>
+                <div class="columns">
+                  <div class="column">
+                    {{ if .list }}
+                      {{ $.Scratch.Set "size" (div (len .list) 2) }}
+                      {{ $.Scratch.Set "addition" (mod (len .list) 2) }}
+                    {{ end }}
+                    {{ $size := $.Scratch.Get "size" }}
+                    {{ $addition := $.Scratch.Get "addition" }}
+                    <ul class="fa-ul is-size-5">
+                      {{ with .list }}
+                        {{ range first $size . }}
+                        <li><i class="fa-li {{ .icon }}"></i>{{ .label }}</li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  </div>
+                  <div class="column">
+                    <ul class="fa-ul is-size-5">
+                      {{ with .list }}
+                        {{ range last (add $size $addition) . }}
+                        <li><i class="fa-li {{ .icon }}"></i>{{ .label }}</li>
+                        {{ end }}
+                      {{ end }}
+                    </ul>
+                  </div>
+                </div>
+            </div>
+            {{ if not (mod $index 2) }}
+              <div class="column is-hidden-mobile">
+                <img src="/{{ .image }}" />
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  <section class="hero is-medium is-white">
+    <div class="hero-body">
+      {{ partial "section_team.html" . }}
+    </div>
+  </section>
+
 {{ end }}

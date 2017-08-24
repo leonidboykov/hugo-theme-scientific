@@ -1,0 +1,117 @@
+- id: "site-name"
+  translation: "Laboratory of<br>Intelligent Systems"
+
+- id: "site-slogan"
+  translation: "Things go better with Intelligent Systems"
+
+- id: "more"
+  translation: "More"
+
+- id: "read-more"
+  translation: "Read More"
+
+- id: "address"
+  translation: "Address"
+
+- id: "links"
+  translation: "Links"
+
+- id: "projects"
+  translation: "Projects"
+
+- id: "team"
+  translation: "Team"
+
+- id: "blog"
+  translation: "Blog"
+
+- id: "contacts"
+  translation: "Contacts"
+
+- id: "map"
+  translation: "Map"
+
+- id: "map-subtitle"
+  translation: "**Here** we are"
+
+- id: "name"
+  translation: "Name"
+
+- id: "email"
+  translation: "Email"
+
+- id: "message"
+  translation: "Message"
+
+- id: "message-placeholder"
+  translation: "Explain how we can help you"
+
+- id: "submit"
+  translation: "Submit"
+
+#
+# Subtitles
+#
+- id: "blog-subtitle"
+  translation: "Our latest **news**"
+
+- id: "contacts-subtitle"
+  translation: "Drop us a **line**"
+
+#
+# Profile
+#
+- id: "biography"
+  translation: "Biography"
+
+- id: "interests"
+  translation: "Scientific Interests"
+
+- id: "current-interests"
+  translation: "Current Scientific Interests"
+
+- id: "education"
+  translation: "Education / Work Experience"
+
+- id: "teaching"
+  translation: "Teaching"
+
+- id: "awards"
+  translation: "Awards"
+
+- id: "conferences"
+  translation: "Conferences"
+
+#
+# Section Titles
+#
+# Section home
+- id: "section-home-1-title"
+  translation: "Basic Research"
+
+- id: "section-home-1-description"
+  translation: "Actual problems of developing the artificial intelligence systems form a core of the laboratory research. They include:"
+
+- id: "section-home-2-title"
+  translation: "Technologies and reuse solutions"
+
+- id: "section-home-2-description"
+  translation: "Basic research results and the developed tools are used in different applied research, as results from the laboratory research interests and customers’ demands. The main applied developments cover: transportation logistics, planning and control, distributed systems of decision making and control, business process management, etc."
+
+- id: "section-home-3-title"
+  translation: "Applied research"
+
+- id: "section-home-3-description"
+  translation: "Actual problems of developing the artificial intelligence systems form a core of the laboratory research. They include:"
+
+- id: "section-team-subtitle"
+  translation: "Meet our **team**"
+
+- id: "section-projects-subtitle"
+  translation: "What we **do**"
+
+- id: "address-location"
+  translation: "Russia, 199178, Saint Petersburg, 14th line, 39, SPIIRAS"
+
+- id: "license"
+  translation: "The source code is licensed [MIT](http://opensource.org/licenses/mit-license.php). The website content is licensed [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."
