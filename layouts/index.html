@@ -9,7 +9,7 @@
       <h2 class="subtitle is-4">{{ .Site.Params.siteSubsite | safeHTML }}</h2>
 
       {{ with .Site.GetPage "section" "contacts" }}
-        <a class="button is-large is-info is-hidden-mobile" href="{{ .URL | absLangURL }}">
+        <a class="button is-large is-info is-hidden-mobile" href="{{ .URL | relLangURL }}">
           <span class="icon">
             <i class="fa fa-paper-plane"></i>
           </span>

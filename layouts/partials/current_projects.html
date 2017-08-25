@@ -29,7 +29,7 @@
         {{ end }}
       </div>
       {{ with .Site.GetPage "section" "projects" }}
-        <a class="button is-large is-info" href="{{ .URL | absLangURL }}">
+        <a class="button is-large is-info" href="{{ .URL | relLangURL }}">
           {{ i18n "projects-button" }}
         </a>
       {{ end }}

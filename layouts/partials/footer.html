@@ -19,7 +19,7 @@
         </div>
         <div class="level-right is-hidden-mobile">
           {{ range .Site.Menus.main }}
-            <a class="level-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+            <a class="level-item" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
           {{ end }}
           <div class="level-item">
           </div>

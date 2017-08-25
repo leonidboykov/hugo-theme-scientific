@@ -24,7 +24,7 @@
       <div class="navbar-end">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-        <a class="navbar-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{ end }}" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+        <a class="navbar-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}is-active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
         {{ end }}
         {{ if .IsTranslated }}
           {{ range .Translations }}
