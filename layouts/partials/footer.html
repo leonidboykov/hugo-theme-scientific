@@ -1,0 +1,30 @@
+<footer class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <div class="level">
+        <div class="level-left">
+          <div class="level-item is-hidden-mobile">
+            <span class="icon is-medium"><i class="fa fa-rocket"></i></span>
+          </div>
+          <div class="level-item">
+            <div>
+              <p>
+                &copy; {{ .Site.Params.initialYear }} &mdash; {{ now.Year }} <a href="{{ "/" | absLangURL }}">{{ .Site.Title }}</a>.
+              </p>
+              <p class="is-size-6">
+                Developed by <a href="https://leonidboykov.com">Leonid Boykov</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="level-right is-hidden-mobile">
+          {{ range .Site.Menus.main }}
+            <a class="level-item" href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+          {{ end }}
+          <div class="level-item">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -6,7 +6,7 @@
     {{ i18n "section-team-subtitle" | markdownify }}
   </h3>
   <div class="columns is-multiline">
-    {{ range where .Site.RegularPages "Section" "team" }}
+    {{ range where .Site.RegularPages "Section" "member" }}
       {{ .Render "list" }}
     {{ end }}
   </div>

@@ -1,0 +1,109 @@
+[site-name]
+other = "Лаборатория<br>Интеллектуальных Систем"
+
+[site-slogan]
+other = "Все лучше с Интеллектуальными Системами"
+
+[more]
+other = "Ещё"
+
+[read-more]
+other = "Ещё"
+
+[address]
+other = "Адрес"
+
+[links]
+other = "Ссылки"
+
+[team]
+other = "Команда"
+
+[blog]
+other = "Новости"
+
+[contacts]
+other = "Контакты"
+
+[map]
+other = "Карта"
+
+[map-subtitle]
+other = "Мы **здесь**"
+
+[name]
+other = "Имя"
+
+[email]
+other = "Почта"
+
+[message]
+other = "Сообщение"
+
+[message-placeholder]
+other = "Как мы можем вам помочь?"
+
+[submit]
+other = "Отправить"
+
+#
+# Subtitles
+#
+[blog-subtitle]
+other = "Наши последние **новости**"
+
+[contacts-subtitle]
+other = "**Напишите** нам"
+
+#
+# Profile
+#
+[biography]
+other = "Биография"
+
+[interests]
+other = "Научные интересы"
+
+[current-interests]
+other = "Current Scientific Interests"
+
+[education]
+other = "Опыт работы"
+
+[teaching]
+other = "Курсы лекций"
+
+[awards]
+other = "Награды"
+
+[conferences]
+other = "Конференции"
+
+#
+# Section Titles
+#
+
+[section-team-subtitle]
+other = "Встречайте нашу **команду**"
+
+# Project
+[projects]
+other = "Проекты"
+
+[projects-button]
+other = "Наши проекты"
+
+[projects-subtitle]
+other = "Что мы **делаем**"
+
+[current-projects-subtitle]
+other = "Наши **текущие** проекты"
+
+[current-projects-empty]
+other = "В данный момент у нас нет проектов, приходите позже."
+
+[address-location]
+other = "Россия, 199178, Санкт-Петербург, 14 линия ВО, 39, СПИИРАН"
+
+[license]
+other = "Исходный код по лицензией [MIT](http://opensource.org/licenses/mit-license.php). Контент вебсайта под лицензией [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."

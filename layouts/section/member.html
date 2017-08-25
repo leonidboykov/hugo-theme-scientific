@@ -1,0 +1,14 @@
+{{ define "content" }}
+  <main class="section">
+    <div class="container">
+      <h1 class="title is-2">{{ .Title }}</h1>
+      <h3 class="subtitle is-4">{{ .Params.subtitle | markdownify }}</h3>
+      <div class="content">{{ .Content }}</div>
+      <div class="columns is-multiline">
+        {{ range where .Site.RegularPages "Section" "member" }}
+          {{ .Render "list" }}
+        {{ end }}
+      </div>
+    </div>
+  </main>
+{{ end }}

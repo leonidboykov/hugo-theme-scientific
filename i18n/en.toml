@@ -1,0 +1,101 @@
+[more]
+other = "More"
+
+[read-more]
+other = "Read More"
+
+[address]
+other = "Address"
+
+[links]
+other = "Links"
+
+[team]
+other = "Team"
+
+[blog]
+other = "Blog"
+
+[contacts]
+other = "Contacts"
+
+[map]
+other = "Map"
+
+[map-subtitle]
+other = "**Here** we are"
+
+[name]
+other = "Name"
+
+[email]
+other = "Email"
+
+[message]
+other = "Message"
+
+[message-placeholder]
+other = "Explain how we can help you"
+
+[submit]
+other = "Submit"
+
+#
+# Subtitles
+#
+[blog-subtitle]
+other = "Our latest **news**"
+
+[contacts-subtitle]
+other = "Drop us a **line**"
+
+#
+# Profile
+#
+[biography]
+other = "Biography"
+
+[interests]
+other = "Scientific Interests"
+
+[current-interests]
+other = "Current Scientific Interests"
+
+[education]
+other = "Education / Work Experience"
+
+[teaching]
+other = "Teaching"
+
+[awards]
+other = "Awards"
+
+[conferences]
+other = "Conferences"
+
+#
+# Section Titles
+#
+
+[section-team-subtitle]
+other = "Meet our **team**"
+
+
+# Project
+[projects]
+other = "Projects"
+
+[projects-button]
+other = "Our Projects"
+
+[current-projects-subtitle]
+other = "Our **current** projects"
+
+[current-projects-empty]
+other = "There is no projects at the time, come back later."
+
+[address-location]
+other = "Russia, 199178, Saint Petersburg, 14th line, 39, SPIIRAS"
+
+[license]
+other = "The source code is licensed [MIT](http://opensource.org/licenses/mit-license.php). The website content is licensed [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."

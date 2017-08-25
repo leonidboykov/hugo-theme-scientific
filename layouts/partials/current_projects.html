@@ -1,0 +1,38 @@
+<section class="hero is-medium is-warning">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-2">{{ i18n "projects" }}</h2>
+      <h3 class="subtitle is-4">{{ i18n "current-projects-subtitle" | markdownify }}</h3>
+      <div class="columns is-multiline">
+        {{ $data := index .Site.Data .Site.Language.Lang }}
+        {{ range where $data.projects.items ".last_year" now.Year }}
+          <div class="column is-half">
+            <div class="media">
+              <div class="media-left">
+                <span class="icon is-large"><i class="fa fa-search"></i></span>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>{{.title }}</strong>
+                    <br>
+                    <small>{{ .init_year }} &ndash; {{ .last_year }}</small>
+                    <br>
+                    <em>{{ .description | markdownify }}</em>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        {{ else }}
+          <div class="content">{{ i18n "current-projects-empty" | markdownify }}</div>
+        {{ end }}
+      </div>
+      {{ with .Site.GetPage "section" "projects" }}
+        <a class="button is-large is-info" href="{{ .URL | absLangURL }}">
+          {{ i18n "projects-button" }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

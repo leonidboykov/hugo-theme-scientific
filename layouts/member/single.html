@@ -1,14 +1,10 @@
-{{ define "header" }}
-  {{ partial "navigation" . }}
-{{ end }}
-
 {{ define "content" }}
 <section class="hero is-medium">
   <div class="hero-body">
     <div class="container">
       <div class="columns">
         <div class="column is-one-third">
-          <div class="card is-fullwidth">
+          <div class="card">
             <figure class="image is-1by1">
               <img src="/{{ .Page.Section }}/{{ .Params.slug }}.jpg">
             </figure>
