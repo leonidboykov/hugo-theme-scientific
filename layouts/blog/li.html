@@ -1,0 +1,26 @@
+{{ range where .Site.RegularPages "Section" "member" }}
+  {{ if eq $.Params.author .Slug }}
+    {{ $.Scratch.Add "author-name" .Title }}
+    {{ $.Scratch.Add "author-permalink" .Permalink }}
+  {{ end }}
+{{ end }}
+
+<article class="media box">
+  <figure class="media-left">
+    <p class="image is-64x64">
+      <img src="{{ .RelPermalink }}{{ .Params.image }}" alt="">
+    </p>
+  </figure>
+  <div class="media-content">
+    <a href="{{ .Permalink }}"><h3 class="title is-3">{{ .Title }}</h3></a>
+    <p class="has-text-grey"><em>by</em> <a href="{{ $.Scratch.Get "author-permalink" }}">{{ $.Scratch.Get "author-name" }}</a>, <em>at {{ .Date.Format "01 January 2006" }}</em></p>
+    <p class="content is-size-5">
+        {{ .Summary }}
+    </p>
+    <div class="tags">
+      {{ range .Params.tags }}
+      <span class="tag"><i class="fa fa-tags"></i>&nbsp;{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+</article>

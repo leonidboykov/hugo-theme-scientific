@@ -16,15 +16,6 @@ other = "Team"
 [blog]
 other = "Blog"
 
-[contacts]
-other = "Contacts"
-
-[map]
-other = "Map"
-
-[map-subtitle]
-other = "**Here** we are"
-
 [name]
 other = "Name"
 
@@ -45,9 +36,6 @@ other = "Submit"
 #
 [blog-subtitle]
 other = "Our latest **news**"
-
-[contacts-subtitle]
-other = "Drop us a **line**"
 
 #
 # Profile
@@ -81,7 +69,7 @@ other = "Conferences"
 other = "Meet our **team**"
 
 
-# Project
+# Projects
 [projects]
 other = "Projects"
 
@@ -94,8 +82,21 @@ other = "Our **current** projects"
 [current-projects-empty]
 other = "There is no projects at the time, come back later."
 
-[address-location]
-other = "Russia, 199178, Saint Petersburg, 14th line, 39, SPIIRAS"
+# Contacts
+[contacts]
+other = "Contacts"
+
+[contacts-subtitle]
+other = "Drop us a **line**"
+
+[map]
+other = "Map"
+
+[map-subtitle]
+other = "**Here** we are"
+
+[contacts-button]
+other = "Contact Us"
 
 [license]
 other = "The source code is licensed [MIT](http://opensource.org/licenses/mit-license.php). The website content is licensed [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)."

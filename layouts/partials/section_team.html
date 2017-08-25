@@ -7,7 +7,7 @@
   </h3>
   <div class="columns is-multiline">
     {{ range where .Site.RegularPages "Section" "member" }}
-      {{ .Render "list" }}
+      {{ .Render "li" }}
     {{ end }}
   </div>
 </div>

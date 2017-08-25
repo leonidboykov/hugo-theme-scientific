@@ -7,12 +7,15 @@
     <div class="container has-text-centered">
       <h1 class="title is-1 is-spaced">{{ .Site.Params.siteTitle | safeHTML }}</h1>
       <h2 class="subtitle is-4">{{ .Site.Params.siteSubsite | safeHTML }}</h2>
-      <a class="button is-large is-info is-hidden-mobile" href="/contacts">
-        <span class="icon">
-          <i class="fa fa-paper-plane"></i>
-        </span>
-        <span>Contact Us</span>
-      </a>
+
+      {{ with .Site.GetPage "section" "contacts" }}
+        <a class="button is-large is-info is-hidden-mobile" href="{{ .URL | absLangURL }}">
+          <span class="icon">
+            <i class="fa fa-paper-plane"></i>
+          </span>
+          <span>{{ i18n "contacts-button" }}</span>
+        </a>
+      {{ end }}
     </div>
   </div>
 </header>

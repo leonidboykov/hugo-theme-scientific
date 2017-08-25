@@ -22,15 +22,6 @@ other = "Команда"
 [blog]
 other = "Новости"
 
-[contacts]
-other = "Контакты"
-
-[map]
-other = "Карта"
-
-[map-subtitle]
-other = "Мы **здесь**"
-
 [name]
 other = "Имя"
 
@@ -51,9 +42,6 @@ other = "Отправить"
 #
 [blog-subtitle]
 other = "Наши последние **новости**"
-
-[contacts-subtitle]
-other = "**Напишите** нам"
 
 #
 # Profile
@@ -101,6 +89,22 @@ other = "Наши **текущие** проекты"
 
 [current-projects-empty]
 other = "В данный момент у нас нет проектов, приходите позже."
+
+# Contacts
+[contacts]
+other = "Контакты"
+
+[contacts-subtitle]
+other = "**Напишите** нам"
+
+[map]
+other = "Карта"
+
+[map-subtitle]
+other = "Мы **здесь**"
+
+[contacts-button]
+other = "Контакты"
 
 [address-location]
 other = "Россия, 199178, Санкт-Петербург, 14 линия ВО, 39, СПИИРАН"

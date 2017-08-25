@@ -1,0 +1,18 @@
+{{ define "content" }}
+  {{ $currentNode := . }}
+  {{ range where .Site.Pages "Section" "team" }}
+  {{ if eq $currentNode.Params.author .Slug }}
+    {{ $.Scratch.Add "author-name" .Title }}
+    {{ $.Scratch.Add "author-permalink" .Permalink }}
+  {{ end }}
+  {{ end }}
+  <main class="section">
+    <div class="container">
+      <h1 class="title is-2">{{ .Title }}</h1>
+      <p class="has-text-grey"><em>by</em> <a href="{{ $.Scratch.Get "author-permalink" }}">{{ $.Scratch.Get "author-name" }}</a>, <em>at {{ .Date.Format "01 January 2006" }}</em></p>
+      <br />
+      <div class="content">{{ .Content }}</div>
+      {{ template "_internal/disqus.html" . }}
+    </div>
+  </main>
+{{ end }}

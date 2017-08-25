@@ -23,7 +23,7 @@
     {{ end }}
     {{ block "content" . }}{{ end }}
     {{ block "footer" . }}
-      {{ partial "footer" . }}
+      {{ partialCached "footer" . }}
     {{ end }}
     <script src="/js/main.js"></script>
   </body>

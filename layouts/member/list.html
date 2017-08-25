@@ -1,16 +1,14 @@
-<div class="column is-one-third-tablet is-one-quarter-desktop">
-  <a href="{{ .Permalink }}">
-    <div class="card is-fullheight">
-      <figure class="image is-1by1">
-        <img src="/{{ .Page.Section }}/{{ .Params.slug }}.jpg">
-      </figure>
-      <div class="card-content">
-        <div class="media-content">
-          <a href="{{ .Permalink }}"><h3 class="title is-4">{{ .Title }}</h3></a>
-          <p class="subtitle is-6"><em>{{ .Params.position }}</em></p>
-          <p><span class="icon"><i class="fa fa-envelope-o"></i></span> <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a></p>
-        </div>
+{{ define "content" }}
+  <main class="section">
+    <div class="container">
+      <h1 class="title is-2">{{ .Title }}</h1>
+      <h3 class="subtitle is-4">{{ .Params.subtitle | markdownify }}</h3>
+      <div class="content">{{ .Content }}</div>
+      <div class="columns is-multiline">
+        {{ range where .Site.RegularPages "Section" "member" }}
+          {{ .Render "li" }}
+        {{ end }}
       </div>
     </div>
-  </a>
-</div>
+  </main>
+{{ end }}
