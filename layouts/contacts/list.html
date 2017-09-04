@@ -3,42 +3,48 @@
   <div class="container">
     <h1 class="title is-2">{{ .Title }}</h1>
     <h3 class="subtitle is-4">{{ .Params.subtitle | markdownify }}</h3>
-    <div class="content">{{ .Content }}</div>
-    
-    <form action="https://formspree.io/{{ .Site.Params.siteEmail }}" method="POST">
-      <div class="columns">
-        <div class="column">
-          <label class="label">{{ i18n "name" }}</label>
-          <div class="control has-icon">
-            <input class="input" name="name" type="text" placeholder="Doctor Who" required>
-            <span class="icon is-small">
-              <i class="fa fa-user"></i>
-            </span>
+
+    <div class="columns">
+      <div class="column is-3">
+        <div class="content">{{ .Content }}</div>
+      </div>
+      <div class="column is-9">
+        <form action="https://formspree.io/{{ .Site.Params.siteEmail }}" method="POST">
+          <div class="columns">
+            <div class="column">
+              <label class="label">{{ i18n "name" }}</label>
+              <div class="control has-icon">
+                <input class="input" name="name" type="text" placeholder="Doctor Who" required>
+                <span class="icon is-small">
+                  <i class="fa fa-user"></i>
+                </span>
+              </div>
+            </div>
+            <div class="column">
+              <label class="label">{{ i18n "email" }}</label>
+              <div class="control has-icon">
+                <input class="input" name="email" type="text" placeholder="doctorwho@tardis.com" required>
+                <span class="icon is-small">
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="column">
-          <label class="label">{{ i18n "email" }}</label>
-          <div class="control has-icon">
-            <input class="input" name="email" type="text" placeholder="doctorwho@tardis.com" required>
-            <span class="icon is-small">
-              <i class="fa fa-envelope"></i>
-            </span>
+          <input type="hidden" name="_subject" value="Message from http://space.iias.spb.su">
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_format" value="plain">
+          <input type="hidden" name="_next" value="{{ "contacts/" | absLangURL }}" />
+          <label class="label">{{ i18n "message" }}</label>
+          <div class="control">
+            <textarea class="textarea" name="message" placeholder="{{ i18n "message-placeholder" }}" required></textarea>
           </div>
-        </div>
+          <br />
+          <div class="control">
+            <button class="button is-primary">{{ i18n "submit" }}</button>
+          </div>
+        </form>
       </div>
-      <input type="hidden" name="_subject" value="Message from http://space.iias.spb.su">
-      <input type="text" name="_gotcha" style="display:none">
-      <input type="hidden" name="_format" value="plain">
-      <input type="hidden" name="_next" value="{{ "contacts/" | absLangURL }}" />
-      <label class="label">{{ i18n "message" }}</label>
-      <div class="control">
-        <textarea class="textarea" name="message" placeholder="{{ i18n "message-placeholder" }}" required></textarea>
-      </div>
-      <br />
-      <div class="control">
-        <button class="button is-primary">{{ i18n "submit" }}</button>
-      </div>
-    </form>
+    </div>
   </div>
 </main>
 
@@ -51,7 +57,7 @@
       {{ i18n "map-subtitle" | markdownify }}
     </h3>
     <iframe allowfullscreen="" frameborder="0" width="100%" height="480px" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJheF9fSgxlkYRkMYj1HLhSS8" style="border:0"></iframe>
-  
+
   </div>
 </section>
 
