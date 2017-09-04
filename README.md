@@ -1,4 +1,4 @@
-## Scientific
+# Scientific
 
 Hugo theme for academic laboratories. Demo is available at [ailab.spb.ru](https://ailab.spb.ru)
 
