@@ -1,7 +1,7 @@
 {{ range where .Site.RegularPages "Section" "member" }}
   {{ if eq $.Params.author .Slug }}
-    {{ $.Scratch.Add "author-name" .Title }}
-    {{ $.Scratch.Add "author-permalink" .Permalink }}
+    {{ $.Scratch.Set "author-name" .Title }}
+    {{ $.Scratch.Set "author-permalink" .Permalink }}
   {{ end }}
 {{ end }}
 
