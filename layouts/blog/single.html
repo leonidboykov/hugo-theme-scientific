@@ -1,7 +1,6 @@
 {{ define "content" }}
-  {{ $currentNode := . }}
-  {{ range where .Site.Pages "Section" "team" }}
-    {{ if eq $currentNode.Params.author .Slug }}
+  {{ range where .Site.RegularPages "Section" "member" }}
+    {{ if eq $.Params.author .Slug }}
       {{ $.Scratch.Add "author-name" .Title }}
       {{ $.Scratch.Add "author-permalink" .Permalink }}
     {{ end }}
