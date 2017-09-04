@@ -1,10 +1,10 @@
 {{ define "content" }}
   {{ $currentNode := . }}
   {{ range where .Site.Pages "Section" "team" }}
-  {{ if eq $currentNode.Params.author .Slug }}
-    {{ $.Scratch.Add "author-name" .Title }}
-    {{ $.Scratch.Add "author-permalink" .Permalink }}
-  {{ end }}
+    {{ if eq $currentNode.Params.author .Slug }}
+      {{ $.Scratch.Add "author-name" .Title }}
+      {{ $.Scratch.Add "author-permalink" .Permalink }}
+    {{ end }}
   {{ end }}
   <main class="section">
     <div class="container">
