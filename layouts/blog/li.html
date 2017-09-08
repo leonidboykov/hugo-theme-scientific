@@ -5,12 +5,7 @@
   {{ end }}
 {{ end }}
 
-<article class="media box">
-  <figure class="media-left">
-    <p class="image is-64x64">
-      <img src="{{ .RelPermalink }}{{ .Params.image }}" alt="">
-    </p>
-  </figure>
+<article class="media">
   <div class="media-content">
     <a href="{{ .Permalink }}"><h3 class="title is-3">{{ .Title }}</h3></a>
     <p class="has-text-grey"><em>by</em> <a href="{{ $.Scratch.Get "author-permalink" }}">{{ $.Scratch.Get "author-name" }}</a>, <em>at {{ .Date.Format "01 January 2006" }}</em></p>
