@@ -10,29 +10,25 @@
         {{ $data := index .Site.Data .Site.Language.Lang }}
         {{ range sort $data.projects.items "last_year" "desc" }}
           <div class="column is-half">
-            <div class="card is-fullheight">
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-left">
-                    <span class="icon is-large"><i class="fa fa-{{ .icon | default "book" }}"></i></span>
-                  </div>
-                  <div class="media-content">
-                    <div class="content">
-                      <p>
-                        <strong>{{.title }}</strong>
-                        <br>
-                        <small>
-                          {{ if eq .init_year .last_year }}
-                            {{ .last_year }}
-                          {{ else }}
-                            {{ .init_year }} &mdash; {{ .last_year }}
-                          {{ end }}
-                        </small>
-                        <br>
-                        <em>{{ .description | markdownify }}</em>
-                      </p>
-                    </div>
-                  </div>
+            <div class="media">
+              <div class="media-left">
+                <span class="icon is-large"><i class="fa fa-{{ .icon | default "book" }}"></i></span>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>{{.title }}</strong>
+                    <br>
+                    <small>
+                      {{ if eq .init_year .last_year }}
+                        {{ .last_year }}
+                      {{ else }}
+                        {{ .init_year }} &mdash; {{ .last_year }}
+                      {{ end }}
+                    </small>
+                    <br>
+                    <em>{{ .description | markdownify }}</em>
+                  </p>
                 </div>
               </div>
             </div>
